@@ -1,0 +1,31 @@
+.maincontainer{
+    background: color #f9f9f9;
+    flex: 0.8;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.maincontainer__title{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+    
+}
+
+.maincontainer__videos{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.chip {
+display: inline-block;
+padding: 0 25px;
+height: 50px;
+font-size: 20px;
+line-height: 50px;
+border-radius: 25px;
+background-color: #f1f1f1;
+}
+
