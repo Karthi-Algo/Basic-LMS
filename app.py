@@ -2,12 +2,14 @@ from flask import Flask ,render_template,jsonify,json,request
 from flask_cors import CORS
 import psycopg2
 import sqlite3
-import  logging
-logging.basicConfig(filename="test.log",level=logging.DEBUG,format='%(asctime)s - %(message)s',datefmt='%d-%b-%y %H:%M:%S')
+
+
+
+
+
+
 app=Flask(__name__)
 CORS(app)
-
-
 
 
 
@@ -28,6 +30,11 @@ def get_data():
     data1=cursor.fetchall()
     key=["thumbnail_url","title","channel_name","views","posted_date","channelimage_url","id","topics"]
     data1=[dict(zip(key,data)) for data in data1]
-    logging.debug(data1) 
 
     return jsonify(data1)
+
+if __name__ == '__main__':
+    #app.debug = True
+    print("running app")
+    app.run(debug=True,port=5000,host='0.0.0.0')
+    
